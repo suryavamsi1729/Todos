@@ -1,0 +1,80 @@
+<div class="w-full min-h-screen flex flex-col justify-start items-center gap-4 p-8">
+    <Search class="relative w-full h-auto rounded-2xl bg-[#d4d4df4e] flex flex-row justify-start items-center"></Search>
+    <div class="w-full h-auto flex flex-col justify-start items-start gap-1 py-2">
+        <h1 class="w-full h-auto text-start text-2xl font-medium text-black">Dashboard</h1>
+        <p class="w-full h-auto text-start text-lg font-normal text-[#b2b0b2]"> See your overall team perfomance</p>
+    </div>
+    <div class="w-full h-[220px] grid grid-cols-4 gap-6">
+        <div class="w-full h-full flex flex-col justify-start items-start gap-6 rounded-2xl overflow-hidden bg-gradient-to-br from-[#FE75CA] to-[#FF48BA]">
+            <div class="w-full h-full flex flex-col justify-start items-start gap-2 px-4 py-6">
+                <h1 class="w-full h-auto text-start font-semibold text-white text-4xl">12</h1>
+                <p class="w-full h-auto text-start font-medium text-[#ffffffad] text-sm">TOTAL PROJECTS</p>
+            </div>
+        </div>
+        <div class="w-full h-full flex flex-col justify-start items-start gap-6 rounded-2xl overflow-hidden  bg-gradient-to-br from-[#9E81FB] to-[#6A3EFA]">
+            <div class="w-full h-full flex flex-col justify-start items-start gap-2 px-4 py-6">
+                <h1 class="w-full h-auto text-start font-semibold text-white text-4xl">1</h1>
+                <p class="w-full h-auto text-start font-medium text-[#ffffffad] text-sm">ASSIGNED</p>
+            </div>
+        </div>
+        <div class="w-full h-full flex flex-col justify-start items-start gap-6 rounded-2xl overflow-hidden  bg-gradient-to-br from-[#FAAD77] to-[#FD9046]">
+            <div class="w-full h-full flex flex-col justify-start items-start gap-2 px-4 py-6">
+                <h1 class="w-full h-auto text-start font-semibold text-white text-4xl">5</h1>
+                <p class="w-full h-auto text-start font-medium text-[#ffffffad] text-sm">IN PROGRESS</p>
+            </div>
+        </div>
+        <div class="w-full h-full flex flex-col justify-start items-start gap-6 rounded-2xl overflow-hidden bg-gradient-to-br from-[#26D44C] to-[#16B336]">
+            <div class="w-full h-full flex flex-col justify-start items-start gap-2 px-4 py-6">
+                <h1 class="w-full h-auto text-start font-semibold text-white text-4xl">6</h1>
+                <p class="w-full h-auto text-start font-medium text-[#ffffffad] text-sm">COMPLETED</p>
+            </div>
+        </div>
+    </div>
+    <div class="w-full grow grid grid-cols-2 gap-6 ">
+        <Container class="w-full h-full bg-white rounded-2xl p-4">
+            <div class="w-full h-full flex flex-col justify-start items-start gap-4">
+                <div class="w-full h-auto flex flex-row justify-between items-center ">
+                    <h1 class="w-auto h-auto text-start text-xl font-normal">Performance</h1>
+                    <p class="w-auto h-auto text-end text-sm font-medium text-[#4F27C6] hover:cursor-pointer">See all</p>
+                </div>
+                <div class="relative w-full grow flex flex-col justify-center items-center">
+                    <svg class="absolute rotate-90" width="220px" height="220px" xmlns="http://www.w3.org/2000/svg">
+                        <circle [style.stroke-dashoffset]="dash" class="circularprogressbar fill-none stroke-[#804CEA] stroke-[10px]"  cx="110" cy="110" r="90" stroke-linecap="round" />
+                    </svg>
+                    <svg class="absolute rotate-90" width="180px" height="180px" xmlns="http://www.w3.org/2000/svg">
+                        <circle [style.stroke-dashoffset]="dashtwo" class="circularprogressbartwo fill-none stroke-[#F9736E] stroke-[9px]"  cx="90" cy="90" r="70" stroke-linecap="round" />
+                    </svg>
+                    <div class="w-auto h-auto absolute flex flex-col justify-center items-center">
+                        <h1 class=" w-auto h-auto text-lg text-black font-medium">March</h1>
+                        <p class="w-auto h-auto text-sm text-zinc-400 font-medium">2022</p>
+                    </div>
+                </div>
+                <div class="w-full h-auto flex flex-row justify-around items-center">
+                    <div  class="w-auto h-auto flex flex-row justify-center items-center gap-4">
+                        <div class="w-4 h-4 rounded-full bg-[#804CEA]"></div>
+                        <p class="w-auto h-auto text-start text-lg font-medium text-black">Surya</p>
+                    </div>
+                    <div  class="w-auto h-auto flex flex-row justify-center items-center gap-4">
+                        <div class="w-4 h-4 rounded-full bg-[#F9736E]"></div>
+                        <p class="w-auto h-auto text-start text-lg font-medium text-black">Surya</p>
+                    </div>
+                </div>
+            </div>
+        </Container>
+        <Container class="w-full h-full bg-white rounded-2xl p-4">
+            <div class="w-full h-full flex flex-col justify-start items-start gap-4">
+                <div class="w-full h-auto flex flex-row justify-between items-center gap-4 ">
+                    <h1 class="grow h-auto text-start text-xl font-normal">My Task</h1>
+                    <lucide-angular [img]="addIcon" size="22" class=" text-[#4F27C6] group-hover:text-white hover:cursor-pointer" ></lucide-angular> 
+                </div>
+                <div class="w-full grow flex flex-col justify-start items-center gap-5 px-1 py-2">
+                    <Checkbox class="w-full h-auto"/>
+                    <Checkbox class="w-full h-auto"/>
+                    <Checkbox class="w-full h-auto"/>
+                    <Checkbox class="w-full h-auto"/>
+                    <Checkbox class="w-full h-auto"/>
+                </div>
+            </div>
+        </Container>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+<div class="w-[240px] h-full bg-white px-2 py-8 flex flex-col justify-start items-start gap-8">
+    <div class="w-full h-auto flex flex-row justify-start items-center gap-4 px-4">
+        <div class="w-10 h-10 rounded-lg">
+            <img src="kesava.jpeg" class="w-full h-full rounded-lg"/>
+        </div>
+        <div class="grow h-full flex flex-col justify-around items-start">
+            <div class="w-full h-auto text-black font-semibold text-base">Kesava</div>
+            <div class="w-full h-auto text-[#939297] font-semibold text-xs">
+                <span>Online</span> 
+            </div>
+        </div>
+    </div>
+    <nav class="w-full h-grow flex flex-col justify-start items-center  py-2 gap-4">
+        @for(navItem of navItems ; track navItem ){
+            <div (click)="setActiveNavEle(navItem.name,navItem.route)" class="group w-full h-auto flex flex-row justify-center items-center gap-3 px-4 py-2  rounded-xl  hover:cursor-pointer hover:bg-[#dbdbe95c] "
+                [ngClass]="{'bg-[#dbdbe95c]':currentActiveNavEle==navItem.name}"
+            >
+                <div class="w-10 h-10 rounded-xl flex flex-col justify-center items-center  "
+                    [ngClass]="{'bg-[#5d2bf8]':currentActiveNavEle==navItem.name}"
+                >
+                    <lucide-angular [img]="navItem.icon" size="22" 
+                        [ngClass]="{'text-white':currentActiveNavEle==navItem.name,'text-[#7B7790] group-hover:text-black':currentActiveNavEle!=navItem.name}"
+                    ></lucide-angular>
+                </div>
+                <div class="grow h-auto text-start text-[#7B7790] group-hover:text-black font-medium text-base"
+                    [ngClass]="{'text-black':currentActiveNavEle==navItem.name}"
+                >{{navItem.name}}</div>
+            </div>
+        }
+    </nav>
+    <div class="w-full grow flex flex-col justify-end items-center gap-4">
+        @for(navItem of bottomNavItems ; track navItem ){
+            <div (click)="setActiveNavEle(navItem.name,navItem.route)" class="group w-full h-auto flex flex-row justify-center items-center gap-3 px-4 py-2  rounded-xl  hover:cursor-pointer hover:bg-[#dbdbe95c] "
+                [ngClass]="{'bg-[#dbdbe95c]':currentActiveNavEle==navItem.name}"
+            >
+                <div class="w-10 h-10 rounded-xl flex flex-col justify-center items-center  "
+                    [ngClass]="{'bg-[#5d2bf8]':currentActiveNavEle==navItem.name}"
+                >
+                    <lucide-angular [img]="navItem.icon" size="22" 
+                        [ngClass]="{'text-white':currentActiveNavEle==navItem.name,'text-[#7B7790] group-hover:text-black':currentActiveNavEle!=navItem.name}"
+                    ></lucide-angular>
+                </div>
+                <div class="grow h-auto text-start text-[#7B7790] group-hover:text-black font-medium text-base"
+                    [ngClass]="{'text-black':currentActiveNavEle==navItem.name}"
+                >{{navItem.name}}</div>
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,63 @@
+<div class="w-full min-h-screen flex flex-col justify-start items-center gap-2 p-8 pb-4 ">
+    <Search class="relative w-full h-auto rounded-2xl bg-[#d4d4df4e] self-start flex flex-row justify-start items-center"></Search>
+    <div class="w-full h-auto flex flex-row justify-center items-center gap-4 ">
+        <div class="grow h-auto flex flex-col justify-start items-start gap-1 py-2">
+            <h1 class="w-full h-auto text-start text-2xl font-medium text-black">Project Name</h1>
+            <p class="w-full h-auto text-start text-lg font-normal text-[#b2b0b2]"> See Detailes of project</p>
+        </div>
+    </div>
+    <div class="w-full grow flex flex-col justify-center items-start gap-4">
+        <div class="w-full h-auto grid grid-cols-9 justify-start items-center gap-4">
+            <div class="col-span-4 h-full flex flex-col justify-center items-center gap-2 px-6 py-4 rounded-2xl bg-[#d4d4df4e]">
+                <h1 class="w-full h-auto text-start text-black font-semibold text-2xl"> Progress</h1>
+                <div class="relative w-auto h-auto flex flex-col justify-center items-center px-10 py-2">
+                    <svg class="absolute rotate-90" width="200px" height="200px" xmlns="http://www.w3.org/2000/svg">
+                        <circle class="circularprogressbar fill-none stroke-zinc-100 stroke-[10px]"  cx="100" cy="100" r="80" stroke-linecap="round" />
+                    </svg>
+                    <svg class="rotate-90" width="200px" height="200px" xmlns="http://www.w3.org/2000/svg">
+                        <circle [style.stroke-dashoffset]="dash" class="circularprogressbar fill-none stroke-[#804CEA] stroke-[10px]"  cx="100" cy="100" r="80" stroke-linecap="round" />
+                    </svg>
+                    <div class="absolute w-auto h-auto flex flex-col justify-center items-center">
+                        <h1 class="w-auto h-auto text-3xl text-[#804CEA] font-semibold">30%</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-5 h-full flex flex-col justify-start items-center gap-2 px-6 py-4 rounded-2xl bg-[#d4d4df4e]">
+                <h1 class="w-full h-auto text-start text-black font-semibold text-2xl">Weekly Report</h1>
+                <div class="w-full grow flex flex-col justify-start items-center py-6 gap-4 ">
+                    <div class="w-full h-auto grid grid-cols-12 justify-center items-center gap-2"> 
+                        <p class="col-span-8 h-auto  text-start text-xl text-zinc-500 font-semibold">Task</p>
+                        <div class="col-span-4 h-auto flex flex-row justify-start items-center gap-3">
+                            <lucide-angular class="text-green-500" [img]="inc" size="22"></lucide-angular>
+                            <p class="w-auto h-auto text-start text-lg text-green-500 font-semibold">8</p>
+                        </div>
+                    </div>
+                    <div class="w-full h-auto grid grid-cols-12 justify-center items-center gap-2"> 
+                        <p class="col-span-8 h-auto  text-start text-xl text-zinc-500 font-semibold">DeadLines</p>
+                        <div class="col-span-4 h-auto flex flex-row justify-start items-center gap-3">
+                            <lucide-angular class="text-red-500 rotate-90" [img]="inc" size="22"></lucide-angular>
+                            <p class="w-auto h-auto text-start text-lg text-red-500 font-semibold">8</p>
+                        </div>                    
+                    </div>
+                    <div class="w-full h-auto grid grid-cols-12 justify-center items-center gap-2"> 
+                        <p class="col-span-8 h-auto  text-start text-xl text-zinc-500 font-semibold">Hours</p>
+                        <div class="col-span-4 h-auto flex flex-row justify-start items-center gap-3">
+                            <lucide-angular class="text-green-500" [img]="inc" size="22"></lucide-angular>
+                            <p class="w-auto h-auto text-start text-lg text-green-500 font-semibold">8</p>
+                        </div>                    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-full grow p-3 bg-[#d4d4df4e] rounded-2xl">
+            <div class="w-full h-auto flex flex-row justify-between items-center gap-4">
+                <h1 class="w-auto h-auto text-start text-xl text-black font-semibold px-4">Tasks</h1>
+                <div class="w-full h-auto flex flex-col justify-start items-center gap-2">
+                    <div class="w--full h-auto px-4 py-2 rounded-xl flex flex-row justify-start items-center gap-2">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

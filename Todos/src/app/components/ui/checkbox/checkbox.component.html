@@ -1,0 +1,10 @@
+<div (click)="setClicked()" class="group w-full h-auto flex flex-row justify-start items-center gap-3 hover:cursor-pointer ">
+    <div class="w-6 h-6 p-[2px] rounded-xs border-[1.5px]"
+        [ngClass]="{ 'bg-[#5D2BF9] border-[#5D2BF9]': checked }">
+        <lucide-angular [img]="checkboxIcon" size="19"
+            class="text-white" *ngIf="checked" strokeWidth="3"></lucide-angular>
+    </div>
+    <p class="grow h-full text-start font-normal text-base"
+        [ngClass]="{ 'text-[#AAA9AE] line-through': checked }"
+    >Checkbox</p>
+</div>

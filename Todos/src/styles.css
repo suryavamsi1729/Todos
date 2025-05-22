@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+.shadow-containers{
+    backdrop-filter: blur(24px);
+    box-shadow: 0px 0px 32px 0px #72729F29;
+}

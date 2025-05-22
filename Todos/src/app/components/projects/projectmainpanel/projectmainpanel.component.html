@@ -1,0 +1,36 @@
+<div class="w-full h-full flex flex-col justify-start items-center gap-4">
+    <div class="z-[50] w-full h-auto sticky top-0 p-4 flex flex-col justify-center items-center bg-[#f4f7f9]">
+        <Search class="relative w-full max-w-[540px] h-auto rounded-2xl bg-[#d4d4df4e] self-start flex flex-row justify-start items-center"></Search>
+        <div class="w-full h-auto flex flex-row justify-center items-center gap-4 ">
+            <div class="grow h-auto flex flex-col justify-start items-start gap-1 py-2">
+                <h1 class="w-full h-auto text-start text-2xl font-medium text-black">Projects</h1>
+                <p class="w-full h-auto text-start text-lg font-normal text-[#b2b0b2]"> See all your projects</p>
+            </div>
+            <div class="w-auto h-full px-4 py-2 flex flex-row justify-center items-center gap-2">
+                <div (click)="setDropDown()" class="relative w-[160px] h-auto px-4 py-2 rounded-md bg-[#eaeafd] hover:cursor-pointer">
+                    <p [ngClass]="{'text-[#34f15d]':typeofProjects=='Completed',
+                        'text-[#fd974f]':typeofProjects=='In Progress',
+                        'text-[#6e43fc]':typeofProjects=='Assigned',
+                        'text-[#676567]':typeofProjects==undefined,
+                    }" >{{typeofProjects||"ALL"}}</p>
+                    @if(dropDown){
+                        <div class="absolute left-0 top-11 rounded-md w-full h-auto py-2 flex flex-col justify-center items-center gap-1 bg-[#eaeafd]">
+                            <div (click)="setDropDownVal(undefined)" class="w-full h-auto text-start hover:text-white py-2 px-4 hover:bg-blue-600">ALL</div>
+                            <div (click)="setDropDownVal('Completed')" class="w-full h-auto text-start hover:text-white py-2 px-4 hover:bg-blue-600">Completed</div>
+                            <div (click)="setDropDownVal('In Progress')"  class="w-full h-auto text-start hover:text-white py-2 px-4 hover:bg-blue-600">In Progress</div>
+                            <div (click)="setDropDownVal('Assigned')"  class="w-full h-auto text-start hover:text-white py-2 px-4 hover:bg-blue-600">Assigned</div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="w-full h-auto flex flex-col justify-start items-center py-4 px-8 overflow-auto">
+        <div class="w-full h-auto flex flex-col justify-center items-center gap-6 ">
+                   
+            @for(project of projects; track project.id){
+                <projectsItem [project]="project" [type]="project.status" class="w-full max-w-[720px] h-auto rounded-2xl bg-[#e9e9f6]/70 hover:bg-[#ebebfb]  transition-colors duration-300"/>
+            }
+        </div>
+    </div>
+</div>

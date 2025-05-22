@@ -1,0 +1,18 @@
+<div (click)="navigateFunction()" class="group w-full h-auto flex flex-row justify-start items-center gap-6 px-5 py-4 hover:cursor-pointer">
+    <div class="relative w-6 h-6 flex flex-col justify-center items-center rounded-full bg-gradient-to-br"
+    [ngClass]="{
+        'from-[#26D44C] to-[#16B336]':type=='Completed',
+        'from-[#FAAD77] to-[#FD9046]':type=='In Progress',
+        'from-[#9E81FB] to-[#6A3EFA]':type=='Assigned'}">
+        <div class="absolute w-[18px] h-[18px] rounded-full bg-[#e9e9f6]">
+        </div>
+    </div>
+    <p class="grow h-auto text-xl text-zinc-400 font-normal text-start group-hover:text-zinc-900 transition-colors duration-300">{{project?.name}} </p>
+    <p class="w-auto h-auto text-lg font-normal "
+    [ngClass]="{
+        'text-[#26D44C]':type=='Completed',
+        'text-[#FAAD77]':type=='In Progress',
+        'text-[#9E81FB]':type=='Assigned'}">
+    {{project?.status}}
+    </p>
+</div>
